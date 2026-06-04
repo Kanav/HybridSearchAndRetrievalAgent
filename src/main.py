@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-from datasets import load_dataset
 from qdrant_client import QdrantClient
 from qdrant_client.models import (
     Distance,
@@ -12,10 +9,6 @@ from qdrant_client.models import (
     VectorParams,
     ScoredPoint,
 )
-from transformers import AutoTokenizer
-
-import fastembed
-from fastembed import SparseEmbedding, SparseTextEmbedding, TextEmbedding
 
 from src.indexing import create_collection, make_points
 from src.generate_embeddings import generate_embeddings
@@ -79,4 +72,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

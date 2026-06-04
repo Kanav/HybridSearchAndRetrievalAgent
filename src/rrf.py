@@ -1,13 +1,4 @@
-from qdrant_client.models import (
-    Distance,
-    SparseVector,
-    PointStruct,
-    QueryRequest,
-    SparseIndexParams,
-    SparseVectorParams,
-    VectorParams,
-    ScoredPoint,
-)
+from qdrant_client.models import ScoredPoint
 
 import numpy as np
 

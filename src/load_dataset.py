@@ -2,11 +2,8 @@
 
 import json
 
-import numpy as np
 import pandas as pd
 from datasets import load_dataset
-from transformers import AutoTokenizer
-
 
 
 def load_and_prepare_dataset(dataset_name: str = "ag_news", split: str = "train") -> pd.DataFrame:
@@ -23,8 +20,6 @@ def load_and_prepare_dataset(dataset_name: str = "ag_news", split: str = "train"
     dataset = load_dataset("qiaojin/PubMedQA", "pqa_artificial", split="train")
     print(f"Total instances: {len(dataset)}")
     print(f"Features: {dataset.column_names}")
-    dataset = dataset.select(range(100))
-    print(f"Working with {len(dataset)} instances")
     df = dataset.to_pandas()
     return df
 
